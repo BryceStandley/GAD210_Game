@@ -20,6 +20,8 @@ public class LevelEnd : MonoBehaviour
 
     public void LoadNextLevel()
     {
+        string levelName = SceneManager.GetActiveScene().name;
+        PlayerPrefs.SetInt(levelName, 1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
