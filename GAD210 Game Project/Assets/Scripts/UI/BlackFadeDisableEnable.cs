@@ -5,6 +5,7 @@ using UnityEngine;
 public class BlackFadeDisableEnable : MonoBehaviour
 {
     private float _fadeDisable = 0.5f;
+    public GameObject blackSolid;
 
     private void Start() 
     {
@@ -13,6 +14,7 @@ public class BlackFadeDisableEnable : MonoBehaviour
 
     private void DisableFade()
     {
+        blackSolid.SetActive(true);
         this.gameObject.SetActive(false);
     }
 }

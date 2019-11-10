@@ -14,6 +14,11 @@ public class LevelEnd : MonoBehaviour
             blackFade.SetActive(true);
             blackFade.GetComponent<Animation>().Play("BlackFadeOut");
             levelEndScreen.SetActive(true);
+            GetComponent<AudioSource>().Play();
+            FindObjectOfType<PlayerController>().DisableInput(); // disable player input to player character
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
         }
     }
 
@@ -21,7 +26,10 @@ public class LevelEnd : MonoBehaviour
     public void LoadNextLevel()
     {
         string levelName = SceneManager.GetActiveScene().name;
+        ScoreCounter scoreCounter = FindObjectOfType<ScoreCounter>();
         PlayerPrefs.SetInt(levelName, 1);
+        PlayerPrefs.SetInt(levelName+"stars", scoreCounter.GetStar());
+        PlayerPrefs.SetInt(levelName+"eggs", scoreCounter.GetEgg());
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

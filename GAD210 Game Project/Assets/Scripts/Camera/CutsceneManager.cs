@@ -4,5 +4,7 @@ using UnityEngine;
 
 public class CutsceneManager : MonoBehaviour
 {
-    
+    private void Start() {
+        FindObjectOfType<PlayerController>().DisableInput();
+    }
 }

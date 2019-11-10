@@ -24,16 +24,20 @@ public class PlayerController : MonoBehaviour
         _animator = transform.GetChild(0).GetComponent<Animator>();
         _camera = Camera.main.transform;
         _rigidbody = GetComponent<Rigidbody>();
-        Invoke("Enable", .5f);
+        //Invoke("Enable", .5f);
     }
 
-    private void Enable()
+    public void EnableInput()
     {
         this.gameObject.GetComponent<Rigidbody>().useGravity = true;
         _inputAllowed = true;
 
     }
 
+    public void DisableInput()
+    {
+        _inputAllowed = false;
+    }
 
     // Update is called once per frame
     void FixedUpdate()
