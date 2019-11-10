@@ -28,8 +28,8 @@ public class LevelEnd : MonoBehaviour
         string levelName = SceneManager.GetActiveScene().name;
         ScoreCounter scoreCounter = FindObjectOfType<ScoreCounter>();
         PlayerPrefs.SetInt(levelName, 1);
-        PlayerPrefs.SetInt(levelName+"stars", scoreCounter.GetStar());
-        PlayerPrefs.SetInt(levelName+"eggs", scoreCounter.GetEgg());
+        PlayerPrefs.SetInt(levelName+"Stars", scoreCounter.GetStar());
+        PlayerPrefs.SetInt(levelName+"Eggs", scoreCounter.GetEgg());
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
