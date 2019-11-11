@@ -3069,7 +3069,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!320 &448777609
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -4007,7 +4007,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &622354510
 Animator:
   serializedVersion: 3
@@ -9443,7 +9443,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1338718955
 Animator:
   serializedVersion: 3
@@ -12728,7 +12728,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1781732072
 Animator:
   serializedVersion: 3
@@ -12760,7 +12760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 1781732075}
+  volumeTrigger: {fileID: 1338718958}
   volumeLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -13511,7 +13511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Events:
     m_Signals:
-    - {fileID: 11400000, guid: 5a1b3887014f67345a07e13722fc1066, type: 2}
+    - {fileID: 0}
     - {fileID: 11400000, guid: a70a255f7a6c0d04cbac8f4dcd73c7a4, type: 2}
     m_Events:
     - m_PersistentCalls:
@@ -14485,7 +14485,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &2080534870
 Animator:
   serializedVersion: 3
@@ -14517,7 +14517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 2080534873}
+  volumeTrigger: {fileID: 1338718958}
   volumeLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -17321,6 +17321,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelEndTrigger
       objectReference: {fileID: 0}
+    - target: {fileID: 8823021464939633633, guid: 0387b335fc0f7ed468ecb77857109ada,
+        type: 3}
+      propertyPath: blackFade
+      value: 
+      objectReference: {fileID: 1678351014}
+    - target: {fileID: 8823021464939633633, guid: 0387b335fc0f7ed468ecb77857109ada,
+        type: 3}
+      propertyPath: levelEndScreen
+      value: 
+      objectReference: {fileID: 1678351012}
     - target: {fileID: 8823021464939633661, guid: 0387b335fc0f7ed468ecb77857109ada,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17376,15 +17386,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8823021464939633633, guid: 0387b335fc0f7ed468ecb77857109ada,
-        type: 3}
-      propertyPath: blackFade
-      value: 
-      objectReference: {fileID: 1678351014}
-    - target: {fileID: 8823021464939633633, guid: 0387b335fc0f7ed468ecb77857109ada,
-        type: 3}
-      propertyPath: levelEndScreen
-      value: 
-      objectReference: {fileID: 1678351012}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0387b335fc0f7ed468ecb77857109ada, type: 3}

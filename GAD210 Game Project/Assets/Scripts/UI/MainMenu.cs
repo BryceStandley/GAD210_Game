@@ -11,26 +11,14 @@ public class MainMenu : MonoBehaviour
     public GameObject LevelSelectUI;
     public GameObject QuitUI;
     public GameObject BlackFade;
-    public GameObject Logo;
     public float disableDelay = 0.5f;
 
     private void Awake()
     {
         BlackFade.GetComponent<Animation>().Play("BlackFadeIn");
         Invoke("DisableBlackFade", disableDelay);
-        Invoke("LogoPlay", disableDelay / 2);
     }
 
-    private void LogoPlay()
-    {
-        Logo.GetComponent<Animation>().Play("LogoIn");
-        Invoke("LogoIdle", 1f);
-    }
-
-    private void LogoIdle()
-    {
-        Logo.GetComponent<Animation>().Play("LogoIdle");
-    }
 
 
     public void PlayGame()
@@ -68,7 +56,6 @@ public class MainMenu : MonoBehaviour
         MainMenuUI.SetActive(true);
         LevelSelectUI.GetComponent<Animation>().Play("LevelSelectOut");
         MainMenuUI.GetComponent<Animation>().Play("MainMenuInLevelSelect");
-        LogoIdle();
         Invoke("DisableLevelSelect", disableDelay);
     }
 
@@ -85,7 +72,6 @@ public class MainMenu : MonoBehaviour
         MainMenuUI.SetActive(true);
         OptionsUI.GetComponent<Animation>().Play("OptionsOut");
         MainMenuUI.GetComponent<Animation>().Play("MainMenuIn");
-        LogoIdle();
         Invoke("DisableOptions", disableDelay);
     }
 
@@ -102,7 +88,6 @@ public class MainMenu : MonoBehaviour
         MainMenuUI.SetActive(true);
         QuitUI.GetComponent<Animation>().Play("QuitOut");
         MainMenuUI.GetComponent<Animation>().Play("MainMenuInQuit");
-        LogoIdle();
         Invoke("DisableQuit", disableDelay);
     }
     private void DisableBlackFade()

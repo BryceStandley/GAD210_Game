@@ -23,6 +23,7 @@ public class GameSettingsManager : MonoBehaviour
     public void FOVSetting(float val)
     {
         _fovValue = val;
+        SetFOV();
     }
 
     public void VolumeSetting(float val)
@@ -34,6 +35,7 @@ public class GameSettingsManager : MonoBehaviour
     public void SensitivitySetting(float val)
     {
         _sensitivityValue = val;
+        SetSensitivity();
     }
 
     public void SetFullScreen()
@@ -99,6 +101,12 @@ public class GameSettingsManager : MonoBehaviour
     public void SetVolume()
     {
         mainMixer.SetFloat("GameVol", Mathf.Log10(_volumeValue) * 20);
+    }
+
+    private void SetSensitivity()
+    {
+        CameraController _camController = FindObjectOfType<CameraController>();
+        _camController.rotationSpeed = _sensitivityValue;
     }
 
 

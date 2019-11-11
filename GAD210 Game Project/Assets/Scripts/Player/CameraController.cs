@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     [SerializeField]    private bool _rotateCamera     =   true;
-    [SerializeField]    private float _rotationSpeed   =   5.0f;
+    public float rotationSpeed   =   5.0f;
 
     public Transform cameraTarget;
 
@@ -45,8 +45,8 @@ public class CameraController : MonoBehaviour
     {
        if(_rotateCamera)
         {
-            _yaw += Input.GetAxis("Mouse X") * _rotationSpeed;
-            _pitch -= Input.GetAxis("Mouse Y") * _rotationSpeed;
+            _yaw += Input.GetAxis("Mouse X") * rotationSpeed;
+            _pitch -= Input.GetAxis("Mouse Y") * rotationSpeed;
             _pitch = Mathf.Clamp(_pitch, pitchMinMax.x, pitchMinMax.y);
 
             currentRotation = Vector3.SmoothDamp(currentRotation, new Vector3(_pitch, _yaw), ref rotationSmoothVelocity, rotationSmoothTime);
@@ -56,8 +56,8 @@ public class CameraController : MonoBehaviour
             transform.position = cameraTarget.position - transform.forward * _cameraOffset;
 
 
-            /*transform.RotateAround(_pointToRotateAround.position, transform.right, -Input.GetAxis("Mouse Y") * _rotationSpeed);
-            transform.RotateAround(_pointToRotateAround.position, transform.up, -Input.GetAxis("Mouse X") * _rotationSpeed);
+            /*transform.RotateAround(_pointToRotateAround.position, transform.right, -Input.GetAxis("Mouse Y") * rotationSpeed);
+            transform.RotateAround(_pointToRotateAround.position, transform.up, -Input.GetAxis("Mouse X") * rotationSpeed);
             transform.LookAt(_pointToRotateAround); */
         }
     }
