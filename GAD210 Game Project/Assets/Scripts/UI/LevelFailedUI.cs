@@ -15,7 +15,7 @@ public class LevelFailedUI : MonoBehaviour
         levelResetScreen.SetTimeScaleToOne();
         levelResetScreen.PlayScreenAnimationOut();
         BlackFade.gameObject.SetActive(true);
-        BlackFade.Play();
+        BlackFade.Play("BlackFadeIn");
         playerSpawnPoint.ResetLevel();
 
 
@@ -34,7 +34,7 @@ public class LevelFailedUI : MonoBehaviour
         levelResetScreen.SetTimeScaleToOne();
         levelResetScreen.PlayScreenAnimationOut();
         BlackFade.gameObject.SetActive(true);
-        BlackFade.Play();
+        BlackFade.Play("BlackFadeIn");
         SceneManager.LoadScene("mainMenu");
     }
 }

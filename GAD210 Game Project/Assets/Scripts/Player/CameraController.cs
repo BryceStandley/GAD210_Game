@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField]    private bool _rotateCamera     =   true;
+    public bool cameraEnable = true;
+    public bool rotateCamera     =   true;
     public float rotationSpeed   =   5.0f;
 
     public Transform cameraTarget;
@@ -30,20 +31,21 @@ public class CameraController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.P))
         {
-            if(_rotateCamera)
+            if(rotateCamera)
             {
-                _rotateCamera = false;
+                rotateCamera = false;
             }
-            else if(!_rotateCamera)
+            else if(!rotateCamera)
             {
-                _rotateCamera = true;
+                rotateCamera = true;
             }
         }
+
     }
 
     private void LateUpdate()
     {
-       if(_rotateCamera)
+       if(rotateCamera)
         {
             _yaw += Input.GetAxis("Mouse X") * rotationSpeed;
             _pitch -= Input.GetAxis("Mouse Y") * rotationSpeed;

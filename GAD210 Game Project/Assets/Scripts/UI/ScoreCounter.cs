@@ -27,4 +27,10 @@ public class ScoreCounter : MonoBehaviour
     {
         return _starScore;
     }
+
+    public void ResetScore()
+    {
+       _eggScore = 0;
+       _starScore = 0;
+    }
 }

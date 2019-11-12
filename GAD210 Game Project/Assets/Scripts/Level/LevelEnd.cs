@@ -12,6 +12,7 @@ public class LevelEnd : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             blackFade.SetActive(true);
+            blackFade.GetComponent<BlackFadeDisableEnable>().isLevelEnd = true;
             blackFade.GetComponent<Animation>().Play("BlackFadeOut");
             levelEndScreen.SetActive(true);
             GetComponent<AudioSource>().Play();

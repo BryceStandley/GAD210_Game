@@ -383,7 +383,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8794021662284345886}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.073, y: 1.47, z: 0.08}
+  m_LocalPosition: {x: 0, y: 1.38, z: 1.321}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 714703039794984712}
@@ -401,7 +401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bf1008bb17b8e54b934a2d84055fd98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 7806277768816794390, guid: 9682a3d94730105448d528185e917f28,
+  playerPrefab: {fileID: 4049417791324498338, guid: 4a3abbaa9ef521942911acdb61fcd8a1,
     type: 3}
 --- !u!1 &8794021662423834786
 GameObject:
@@ -414,7 +414,7 @@ GameObject:
   - component: {fileID: 8794021662423834790}
   - component: {fileID: 8794021662423834791}
   - component: {fileID: 8794021662423834788}
-  - component: {fileID: 8794021662423834789}
+  - component: {fileID: 8318514980852958731}
   m_Layer: 9
   m_Name: DeathPlane
   m_TagString: DeathPlane
@@ -430,7 +430,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8794021662423834786}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -12, z: 0}
+  m_LocalPosition: {x: 0, y: -9.5, z: 42.6}
   m_LocalScale: {x: 20, y: 1, z: 20}
   m_Children: []
   m_Father: {fileID: 714703039794984712}
@@ -458,7 +458,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &8794021662423834789
+--- !u!114 &8318514980852958731
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -467,7 +467,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8794021662423834786}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a92e46275fc5a014196745200259077f, type: 3}
+  m_Script: {fileID: 11500000, guid: e194205aaa815be4c8765847a6eb0b2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 0}
   levelFailedUI: {fileID: 0}
