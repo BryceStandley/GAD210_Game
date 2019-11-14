@@ -14,7 +14,7 @@ public class EnemyController : MonoBehaviour
     private Transform _playerTarget;
     private NavMeshAgent _agent;
     private Animator _animator;
-    private LevelResetScreen _levelResetScreen;
+    private LevelReset _levelReset;
     private bool _hitPlayer = false;
     private PlayerManager _playerManager;
 
@@ -28,7 +28,7 @@ public class EnemyController : MonoBehaviour
         _waitTime = startWaitTime;
         _agent = GetComponent<NavMeshAgent>();
         _animator = transform.GetChild(0).GetComponent<Animator>();
-        _levelResetScreen = FindObjectOfType<LevelResetScreen>();
+        _levelReset = FindObjectOfType<LevelReset>();
         _playerManager = FindObjectOfType<PlayerManager>();
         _playerTarget = _playerManager.player.transform;
     }
@@ -61,7 +61,7 @@ public class EnemyController : MonoBehaviour
                 FaceTarget(_agent.destination);
                 if(!_hitPlayer)
                 {
-                    _levelResetScreen.EnemyReset();
+                    _levelReset.EnemyReset();
                     _hitPlayer = true;
                 }
 

@@ -11,20 +11,13 @@ public class MainMenu : MonoBehaviour
     public GameObject LevelSelectUI;
     public GameObject QuitUI;
     public GameObject BlackFade;
+    public GameObject HTPUI;
     public float disableDelay = 0.5f;
 
     private void Awake()
     {
         BlackFade.GetComponent<Animation>().Play("BlackFadeIn");
         Invoke("DisableBlackFade", disableDelay);
-    }
-
-
-
-    public void PlayGame()
-    {
-        SceneManager.LoadScene(2);
-        LevelLoader.instance.currentLevelIndex = 2;
     }
 
     public void ControlOff()
@@ -119,6 +112,12 @@ public class MainMenu : MonoBehaviour
         QuitUI.SetActive(false);
     }
 
+    private void DisableHTP()
+    {
+        HTPUI.SetActive(false);
+    }
+
+
     public void QuitGame()
     {
         BlackFade.SetActive(true);
@@ -130,5 +129,21 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("App Quit");
         Application.Quit();
+    }
+
+    public void HTPOn()
+    {
+        HTPUI.SetActive(true);
+        MainMenuUI.GetComponent<Animation>().Play("MainMenuHTPOut");
+        HTPUI.GetComponent<Animation>().Play("HowToPlayIn");
+        Invoke("DisableMainMenu", disableDelay);
+    }
+
+        public void HTPOff()
+    {
+        MainMenuUI.SetActive(true);
+        HTPUI.GetComponent<Animation>().Play("HowToPlayOut");
+        MainMenuUI.GetComponent<Animation>().Play("MainMenuHTPIn");
+        Invoke("DisableHTP", disableDelay);
     }
 }
